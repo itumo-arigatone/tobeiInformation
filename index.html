@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>information</title>
+    <script src="/socket.io/socket.io.js"></script>
     <style>
         .outer {
             width: 80%;
             margin: 0 auto;
             max-width: 500px;
         }
+
         .importantTime {
             text-align: center;
             font-size: 2.0em;
         }
+
         .otherTime {
             font-size: 1.5em;
         }
+
         .outerNote {
             width: 80%;
             margin: 50px auto 20px auto;
@@ -24,6 +29,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="outer">
         <h1>Check-out</h1>
@@ -88,10 +94,13 @@
             <p>■ Please do raising and lowering the futon by yourself.</p>
             <p>
                 ■ Customers with valuable items should leave at reception.
-                 We will not bear any responsibility if you are suffering 
-                 accident such as lost or stolen without leaving in to the front desk.
+                We will not bear any responsibility if you are suffering
+                accident such as lost or stolen without leaving in to the front desk.
             </p>
         </div>
     </div>
+    <script src="/polyfill.js" nomodule=""></script>
+    <script src="/commons.js"></script>
 </body>
+
 </html>
