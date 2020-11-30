@@ -33,5 +33,5 @@ export default function Home() {
       <br/>
       <Comment comment="Please refrain from using after checkout." />
     </div>
-    );
+  );
 }
