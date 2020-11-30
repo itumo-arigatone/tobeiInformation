@@ -5,7 +5,7 @@ hello worldプロジェクトから改造していきます。
 # 開発方法
 ↓デバッグのローカルサーバー立ち上げ  
 ```sh
-$ gatsby develop
+$ npm run develop
 ```
   
 
