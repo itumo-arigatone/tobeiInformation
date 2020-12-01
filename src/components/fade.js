@@ -6,9 +6,28 @@ export default class Fade  extends React.Component {
     state = {
         isOpen: true,
         isHide: false,
+        background: false
     };
-    timeout = setTimeout(() => { this.setState({isOpen: false}); }, 3000);
-    timeout = setTimeout(() => { this.setState({isHide: true}); }, 4000);
+
+    skipEvent = () => {
+        this.setState({
+            isOpen: false,
+            background: true,
+        });
+        setTimeout(() => {
+            this.setState({
+                isHide: true,
+            });
+            document.getElementsByClassName("outer")[0].setAttribute("style", "display:block");
+        }, 1000);
+        // document.getElementsByClassName("outer")[0].setAttribute("style", "display:block");
+    }
+
+    timeout = setTimeout(() => { this.setState({isOpen: false}); }, 4000);
+    timeout = setTimeout(() => {
+        this.setState({isHide: true});
+        document.getElementsByClassName("outer")[0].setAttribute("style", "display:block");
+    }, 5000);
 
     render() {
         return (
@@ -22,6 +41,12 @@ export default class Fade  extends React.Component {
                 display: this.state.isHide ? "none" : "",
             }}
             >
+                <span onClick={this.skipEvent}
+                    className="skip-button"
+                    style={{
+                        background: this.state.background ? "#727272" : "#ffffff",
+                    }}
+                >skip</span>
                 <div className="category">
                     <div className="first-message">
                         Tobei

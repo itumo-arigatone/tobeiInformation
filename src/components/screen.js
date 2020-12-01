@@ -6,11 +6,6 @@ import "../styles/global.scss"
 
 export default class Screen extends React.Component {
 
-    state = {
-        isOpen: true,
-    };
-    timeout = setTimeout(() => { this.setState({ isOpen: false });}, 4000);
-
     messageArray = [
         "Please do not bring your ski snowboad tool into room.",
         "Please take off your slippers on the tatami mat.",
@@ -23,9 +18,7 @@ export default class Screen extends React.Component {
             <>
                 <Fade />
                 <div className="outer"
-                    style={{
-                        display: this.state.isOpen? "none" : "",
-                    }}
+                    style={{display:"none"}}
                 >
                     <Head headerText="Check-out" />
                     <ImportantTime time="10:00a.m." />
