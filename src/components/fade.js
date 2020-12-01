@@ -1,6 +1,6 @@
 import React from "react"
 
-export default class Feed  extends React.Component {
+export default class Fade  extends React.Component {
     state = {
         isOpen: true,
         isHide: false,
@@ -15,8 +15,8 @@ export default class Feed  extends React.Component {
                 position: "absolute",
                 transition: '1s',
                 opacity: this.state.isOpen ? 1 : 0,
-                width: "100%", // this.state.isOpen ? "100%" : 0,
-                height: "100%", // this.state.isOpen ? "100%" : 0,
+                width: "100%",
+                height: "100%",
                 display: this.state.isHide ? "none" : "",
             }}
             >

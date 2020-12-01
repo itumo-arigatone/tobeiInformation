@@ -1,14 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 import {Head, ImportantTime, Comment, OtherTime} from "../components/header"
-import Feed from "../components/feed"
+import Fade from "../components/fade"
 
 import "../styles/global.scss"
 
 export default function Home() {
   return (
     <>
-      <Feed />
+      <Fade />
       <div className="outer">
         <Head headerText="Check-out"/>
         <ImportantTime time="10:00a.m." />
