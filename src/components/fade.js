@@ -5,8 +5,8 @@ export default class Fade  extends React.Component {
         isOpen: true,
         isHide: false,
     };
-    timeout = setTimeout(() => { this.setState({isOpen: false}); console.log("ちめ"); }, 4000);
-    timeout = setTimeout(() => { this.setState({isHile: true}); console.log("ちめ"); }, 5000);
+    timeout = setTimeout(() => { this.setState({isOpen: false}); console.log("ちめ"); }, 3000);
+    timeout = setTimeout(() => { this.setState({isHile: true}); console.log("ちめ"); }, 4000);
 
     render() {
         return (
