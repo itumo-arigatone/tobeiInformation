@@ -1,5 +1,5 @@
 import React from "react"
-import { Head, ImportantTime, Comment, OtherTime } from "./header"
+import { Head, ImportantTime, Comment, OtherTime, Itemization } from "./header"
 import Fade from "./fade"
 
 import "../styles/global.scss"
@@ -9,7 +9,14 @@ export default class Screen extends React.Component {
     state = {
         isOpen: true,
     };
-    timeout = setTimeout(() => { this.setState({ isOpen: false }); console.log("ちめ"); }, 4000);
+    timeout = setTimeout(() => { this.setState({ isOpen: false });}, 4000);
+
+    messageArray = [
+        "Please do not bring your ski snowboad tool into room.",
+        "Please take off your slippers on the tatami mat.",
+        "Please do raising and lowering the futon by yourself.",
+        "Customers with valuable items should leave at reception.We will not bear any responsibility if you are suffering accident such as lost or stolen without leaving in to the front desk.",
+    ];
 
     render() {
         return (
@@ -45,6 +52,8 @@ export default class Screen extends React.Component {
                     <OtherTime time="7:00a.m.~9:00p.m." />
                     <br />
                     <Comment comment="Please refrain from using after checkout." />
+
+                    <Itemization message={JSON.stringify(this.messageArray)} head="Note"/>
                 </div>
             </>
         );

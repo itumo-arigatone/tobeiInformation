@@ -31,3 +31,19 @@ export const OtherTime = props =>{
 }
 
 export const Comment = props => <span>&nbsp; {props.comment}</span>
+
+export const Itemization = props =>{
+    const messages = JSON.parse(props.message)
+    let li = [];
+    messages.forEach(message => {
+        li.push(<li>{message}</li>);
+    });
+    return(
+        <>
+            <h1>{props.head}</h1>
+            <ul>
+                {li}
+            </ul>
+        </>
+    )
+}
