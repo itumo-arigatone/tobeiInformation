@@ -9,9 +9,9 @@ export const ImportantTime = props =>
         </strong>
     </div>
 
-export const OtherTime = props =>{
+export const OtherTime = props => {
     if (props.option == "undefined" || props.option == null) {
-        return(
+        return (
             <div className="otherTime">
                 <strong>
                     &nbsp;{props.time}
@@ -22,7 +22,7 @@ export const OtherTime = props =>{
     return (
         <div className="otherTime">
             &nbsp;{props.option}
-            <br/>
+            <br />
             <strong>
                 &nbsp;{props.time}
             </strong>
@@ -32,13 +32,13 @@ export const OtherTime = props =>{
 
 export const Comment = props => <span>&nbsp; {props.comment}</span>
 
-export const Itemization = props =>{
+export const Itemization = props => {
     const messages = JSON.parse(props.message)
     let li = [];
     messages.forEach((message, index) => {
         li.push(<li key={index}>{message}</li>);
     });
-    return(
+    return (
         <div style={{
             margin: "60px 0 0 0",
         }}

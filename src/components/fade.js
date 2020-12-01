@@ -2,7 +2,7 @@ import React from "react"
 import Img from "../images/information.png"
 import "../styles/first.scss"
 
-export default class Fade  extends React.Component {
+export default class Fade extends React.Component {
     state = {
         isOpen: true,
         isHide: false,
@@ -23,23 +23,23 @@ export default class Fade  extends React.Component {
         // document.getElementsByClassName("outer")[0].setAttribute("style", "display:block");
     }
 
-    timeout = setTimeout(() => { this.setState({isOpen: false}); }, 4000);
+    timeout = setTimeout(() => { this.setState({ isOpen: false }); }, 4000);
     timeout = setTimeout(() => {
-        this.setState({isHide: true});
+        this.setState({ isHide: true });
         document.getElementsByClassName("outer")[0].setAttribute("style", "display:block");
     }, 5000);
 
     render() {
         return (
             <div className="first"
-            style={{
-                position: "absolute",
-                transition: '1s',
-                opacity: this.state.isOpen ? 1 : 0,
-                width: "95%",
-                height: "100%",
-                display: this.state.isHide ? "none" : "",
-            }}
+                style={{
+                    position: "absolute",
+                    transition: '1s',
+                    opacity: this.state.isOpen ? 1 : 0,
+                    width: "95%",
+                    height: "100%",
+                    display: this.state.isHide ? "none" : "",
+                }}
             >
                 <span onClick={this.skipEvent}
                     className="skip-button"
@@ -50,12 +50,12 @@ export default class Fade  extends React.Component {
                 <div className="category">
                     <div className="first-message">
                         Tobei
-                        <br/>
+                        <br />
                         Information
                     </div>
-                    <img src={ Img } className="first-image" />
+                    <img src={Img} className="first-image" />
                 </div>
-          </div>
+            </div>
         );
     };
 }
