@@ -35,15 +35,20 @@ export const Comment = props => <span>&nbsp; {props.comment}</span>
 export const Itemization = props =>{
     const messages = JSON.parse(props.message)
     let li = [];
-    messages.forEach(message => {
-        li.push(<li>{message}</li>);
+    messages.forEach((message, index) => {
+        li.push(<li key={index}>{message}</li>);
     });
     return(
-        <>
-            <h1>{props.head}</h1>
+        <div style={{
+            margin: "60px 0 0 0",
+        }}
+        >
+            <h1 style={{
+                textAlign: "center",
+            }}>{props.head}</h1>
             <ul>
                 {li}
             </ul>
-        </>
+        </div>
     )
 }
