@@ -46,7 +46,7 @@ export const Itemization = props => {
             <h1 style={{
                 textAlign: "center",
             }}>{props.head}</h1>
-            <ul>
+            <ul className="itemization-outer">
                 {li}
             </ul>
         </div>
