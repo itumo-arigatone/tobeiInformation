@@ -1,5 +1,5 @@
 import React from "react"
-import { Head, ImportantTime, Comment, OtherTime, Itemization } from "./header"
+import { Head, ImportantTime, Comment, OtherTime, Itemization } from "./contents"
 import Fade from "./fade"
 
 import "../styles/global.scss"
