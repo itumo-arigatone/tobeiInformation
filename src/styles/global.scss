@@ -26,3 +26,13 @@ body {
 .itemization-outer{
     padding-left: 15px;
 }
+
+.generic-button {
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.3em 1em;
+    color: #575757;
+    border: solid 2px #575757;
+    border-radius: 3px;
+    margin: 12px
+}

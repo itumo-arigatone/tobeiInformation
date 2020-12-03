@@ -20,7 +20,6 @@ export default class Fade extends React.Component {
             });
             document.getElementsByClassName("outer")[0].setAttribute("style", "display:block");
         }, 1000);
-        // document.getElementsByClassName("outer")[0].setAttribute("style", "display:block");
     }
 
     timeout = setTimeout(() => { this.setState({ isOpen: false }); }, 4000);
