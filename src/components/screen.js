@@ -1,6 +1,7 @@
-import React from "react"
-import { Head, ImportantTime, Comment, OtherTime, Itemization } from "./contents"
-import Fade from "./fade"
+import React from "react";
+import { Head, ImportantTime, Comment, OtherTime, Itemization } from "./contents";
+import Fade from "./fade";
+import Covid from "./covid"
 
 import "../styles/global.scss"
 
@@ -20,6 +21,9 @@ export default class Screen extends React.Component {
                 <div className="outer"
                     style={{display:"none"}}
                 >
+
+                    <Covid />
+
                     <Head headerText="Check-out" />
                     <ImportantTime time="10:00a.m." />
                     <br />
