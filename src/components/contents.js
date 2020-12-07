@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import { useTranslation } from 'react-i18next';
 
 export const Head = props => <h1>{props.headerText}</h1>
 
@@ -51,4 +52,19 @@ export const Itemization = props => {
             </ul>
         </div>
     )
+}
+
+export const LangageButton = () => {
+    const {t, i18n} = useTranslation();
+    const changeLanguage = lng => {
+        i18n.changeLanguage(lng);
+    };
+
+    return(
+        <div className="langage_button">
+            <button onClick={ () => changeLanguage("ja") }>Japanese</button>
+            <button onClick={ () => changeLanguage("en") }>English</button>
+            <h1>{t("hello")}</h1>
+        </div>
+    );
 }

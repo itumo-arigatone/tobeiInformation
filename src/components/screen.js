@@ -1,5 +1,5 @@
 import React from "react";
-import { Head, ImportantTime, Comment, OtherTime, Itemization } from "./contents";
+import { Head, ImportantTime, Comment, OtherTime, Itemization, LangageButton } from "./contents";
 import Fade from "./fade";
 import Covid from "./covid"
 
@@ -21,7 +21,7 @@ export default class Screen extends React.Component {
                 <div className="outer"
                     style={{display:"none"}}
                 >
-
+                    <LangageButton />
                     <Covid />
 
                     <Head headerText="Check-out" />
