@@ -1,3 +1,16 @@
 {
-    "hello": "hello"
+    "checkOut": "Check-out",
+    "checkOutOption": "※ After checking out we will keep baggage until departure.",
+    "curfew": "Curfew",
+    "curfewOption": "※ I will lock keys for crime prevention.",
+    "mealtime": "Mealtime",
+    "breakfast": "Breakfast",
+    "mealtimeOption": "Reservations are reqired for those wishing to have breakfast.",
+    "bathTime": "bath time",
+    "bathTimeOption": "Please refrain from using after checkout.",
+    "showerRoom": "Shower room",
+    "note1": "Please do not bring your ski snowboad tool into room.",
+    "note2": "Please take off your slippers on the tatami mat.",
+    "note3": "Please do raising and lowering the futon by yourself.",
+    "note4": "Customers with valuable items should leave at reception.We will not bear any responsibility if you are suffering accident such as lost or stolen without leaving in to the front desk."
 }

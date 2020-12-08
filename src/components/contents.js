@@ -55,7 +55,7 @@ export const Itemization = props => {
 }
 
 export const LangageButton = () => {
-    const {t, i18n} = useTranslation();
+    const {i18n} = useTranslation();
     const changeLanguage = lng => {
         i18n.changeLanguage(lng);
     };
@@ -64,7 +64,6 @@ export const LangageButton = () => {
         <div className="langage_button">
             <button onClick={ () => changeLanguage("ja") }>Japanese</button>
             <button onClick={ () => changeLanguage("en") }>English</button>
-            <h1>{t("hello")}</h1>
         </div>
     );
 }
