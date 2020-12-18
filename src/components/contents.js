@@ -1,5 +1,5 @@
-import React from "react";
-import { useTranslation } from 'react-i18next';
+import React, { useState }from "react";
+import { useTranslation } from "react-i18next";
 
 export const Head = props => <h1>{props.headerText}</h1>
 
@@ -55,15 +55,49 @@ export const Itemization = props => {
 }
 
 export const LangageButton = () => {
+
+    const [value, setValue] = useState({
+        ja: false,
+        en: true,
+    });
     const {i18n} = useTranslation();
-    const changeLanguage = lng => {
+    const ClickLangButton = lng => {
         i18n.changeLanguage(lng);
-    };
+        if (lng === "en") {
+            setValue({
+                ja: false,
+                en: true,
+            });
+        } else {
+            setValue({
+                ja: true,
+                en: false,
+            });
+        }
+    }
 
     return(
-        <div className="langage_button">
-            <button onClick={ () => changeLanguage("ja") }>Japanese</button>
-            <button onClick={ () => changeLanguage("en") }>English</button>
+        <div className="langage-area">
+            <div className="langage-button" onClick={ () => ClickLangButton("ja") } >
+                <span
+                    className="generic-button"
+                    style={{
+                        background: value.ja ? "#727272" : "#ffffff",
+                    }}
+                >
+                    日本語
+                </span>
+            </div>
+            <div className="langage-button" onClick={ () => ClickLangButton("en") } >
+                <span
+                    className="generic-button"
+                    style={{
+                        background: value.en ? "#727272" : "#ffffff",
+                    }}
+                >
+                    English
+                </span>
+            </div>
         </div>
     );
 }
