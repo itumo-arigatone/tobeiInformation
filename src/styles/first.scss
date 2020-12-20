@@ -1,0 +1,31 @@
+.category {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 70%;
+}
+.first-message {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    font-weight: 25;
+    font-size: 2.5em;
+}
+.first-image {
+    width: 100%;
+    height: auto;
+}
+
+.skip-button {
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.3em 1em;
+    color: #575757;
+    border: solid 2px #575757;
+    border-radius: 3px;
+    margin: 12px
+}
