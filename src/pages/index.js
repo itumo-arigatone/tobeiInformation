@@ -1,11 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Head, ImportantTime, Comment, OtherTime, Itemization, LangageButton } from "../components/contents";
+import { Link } from "gatsby";
 import Fade from "../components/fade";
 import Covid from "../components/covid";
-import HowTo from "../components/howto";
-import Links from "../components/links";
-import { BrowserRouter as Router, Route  } from "react-router-dom";
 
 import '../components/i18n';
 
@@ -26,12 +24,7 @@ export default function Home() {
                 style={{display:"none"}}
             >
                 <LangageButton />
-                <Router>
-                    <div>
-                        <Links title={t("hotSpring")} />
-                        <Route exact path="/howto" component={HowTo}/>
-                    </div>
-                </Router>
+                <Link to="/howto"></Link>
                 <Covid />
 
                 <Head headerText={ t("checkOut") } />
