@@ -24,7 +24,7 @@ export default function Home() {
                 style={{display:"none"}}
             >
                 <LangageButton />
-                <Link to="/howto"></Link>
+                <Link to="/howto">{t("hotSpring")}</Link>
                 <Covid />
 
                 <Head headerText={ t("checkOut") } />
