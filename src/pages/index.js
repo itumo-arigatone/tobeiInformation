@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { Head, ImportantTime, Comment, OtherTime, Itemization, LangageButton } from "../components/contents";
 import { Link } from "gatsby";
 import Fade from "../components/fade";
-import Covid from "../components/covid";
 
 import '../components/i18n';
 
@@ -25,7 +24,6 @@ export default function Home() {
             >
                 <LangageButton />
                 <Link to="/howto">{t("hotSpring")}</Link>
-                <Covid />
 
                 <Head headerText={ t("checkOut") } />
                 <ImportantTime time="10:00a.m." />
