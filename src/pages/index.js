@@ -4,6 +4,7 @@ import { Headline, ImportantTime, Comment, OtherTime, Itemization, LangageButton
 import { Link } from "gatsby";
 import Fade from "../components/fade";
 import Seo from "../components/seo"
+import Footer from "../components/footer";
 
 import '../components/i18n';
 
@@ -54,6 +55,7 @@ export default function Home() {
 
                 <Itemization message={JSON.stringify(messageArray)} head="Note"/>
             </div>
+            <Footer/>
         </>
     );
 }
