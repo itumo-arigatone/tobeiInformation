@@ -1,8 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Head, ImportantTime, Comment, OtherTime, Itemization, LangageButton } from "../components/contents";
+import { Headline, ImportantTime, Comment, OtherTime, Itemization, LangageButton } from "../components/contents";
 import { Link } from "gatsby";
 import Fade from "../components/fade";
+import Seo from "../components/seo"
 
 import '../components/i18n';
 
@@ -25,27 +26,27 @@ export default function Home() {
                 <LangageButton />
                 <Link to="/howto">{t("hotSpring")}</Link>
 
-                <Head headerText={ t("checkOut") } />
+                <Headline headerText={ t("checkOut") } />
                 <ImportantTime time="10:00a.m." />
                 <br />
                 <Comment comment={ t("checkOutOption") } />
 
-                <Head headerText={ t("curfew") } />
+                <Headline headerText={ t("curfew") } />
                 <ImportantTime time="11:00p.m." />
                 <br />
                 <Comment comment={ t("curfewOption")} />
 
-                <Head headerText={ t("mealtime") } />
+                <Headline headerText={ t("mealtime") } />
                 <OtherTime option={ t("breakfast") } time="7:30a.m.~8:30a.m" />
                 <br />
                 <Comment comment={ t("mealtimeOption") } />
 
-                <Head headerText={ t("bathTime") } />
+                <Headline headerText={ t("bathTime") } />
                 <OtherTime time="4:00p.m.~10:00p.m." />
                 <br />
                 <Comment comment={ t("bathTimeOption") } />
 
-                <Head headerText={ t("showerRoom") } />
+                <Headline headerText={ t("showerRoom") } />
                 <OtherTime time="3:00p.m.~10:00p.m." />
                 <OtherTime time="7:00a.m.~9:00p.m." />
                 <br />
@@ -53,6 +54,19 @@ export default function Home() {
 
                 <Itemization message={JSON.stringify(messageArray)} head="Note"/>
             </div>
+        </>
+    );
+}
+
+export const Head = () => {
+    const {t} = useTranslation();
+
+    return (
+        <>
+            <Seo
+                title={ t("siteTitleTop") }
+                description={ t("siteDescriptionTop") }
+            />
         </>
     );
 }
