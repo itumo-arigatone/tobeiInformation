@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "gatsby build",
+    "build": "npm i && gatsby build",
     "develop": "gatsby develop --host=0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
