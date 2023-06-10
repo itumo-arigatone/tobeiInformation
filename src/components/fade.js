@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Img from "../images/information.png";
 import "../styles/first.scss";
 
-const Fade = () => {
+const Fade = ({isFirstView, setIsFirstView}) => {
     const [isOpen, setIsOpen] = useState(true);
     const [isHide, setisHide] = useState(false);
     const [background, setBackground] = useState(false);
@@ -12,13 +12,17 @@ const Fade = () => {
         setBackground(true);
         setTimeout(() => {
             setisHide(true);
+            setIsFirstView(false);
             document.getElementsByClassName("outer")[0].setAttribute("style", "display:block");
         }, 1000);
     }
 
-    let timeout = setTimeout(() => { setIsOpen(false); }, 4000);
+    let timeout = setTimeout(() => {
+        setIsOpen(false);
+    }, 4000);
     timeout = setTimeout(() => {
         setisHide(true);
+        setIsFirstView(false);
         document.getElementsByClassName("outer")[0].setAttribute("style", "display:block");
     }, 5000);
 
@@ -33,7 +37,7 @@ const Fade = () => {
                 display: isHide ? "none" : "",
             }}
         >
-            <span onClick={() => skipEvent}
+            <span onClick={() => skipEvent()}
                 className="skip-button"
                 style={{
                         background: background ? "#727272" : "#ffffff",

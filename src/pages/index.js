@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { useTranslation } from "react-i18next";
 import { Headline, ImportantTime, Comment, OtherTime, Itemization, LangageButton } from "../components/contents";
 import { Link } from "gatsby";
@@ -11,6 +11,7 @@ import '../components/i18n';
 import "../styles/global.scss";
 
 export default function Home() {
+    const [isFirstView, setIsFirstView] = useState(true);
     const {t} = useTranslation();
     const messageArray = [
         t("note1"),
@@ -20,7 +21,7 @@ export default function Home() {
     ];
     return (
         <>
-            <Fade />
+            <Fade isFirstView={isFirstView} setIsFirstView={setIsFirstView} />
             <div className="outer"
                 style={{display:"none"}}
             >
@@ -55,7 +56,9 @@ export default function Home() {
 
                 <Itemization message={JSON.stringify(messageArray)} head="Note"/>
             </div>
-            <Footer/>
+            {!isFirstView && (
+                <Footer/>
+            )}
         </>
     );
 }
