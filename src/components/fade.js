@@ -1,60 +1,55 @@
-import React from "react"
-import Img from "../images/information.png"
-import "../styles/first.scss"
+import React, {useState} from "react";
+import Img from "../images/information.png";
+import "../styles/first.scss";
 
-export default class Fade extends React.Component {
-    state = {
-        isOpen: true,
-        isHide: false,
-        background: false
-    };
+const Fade = () => {
+    const [isOpen, setIsOpen] = useState(true);
+    const [isHide, setisHide] = useState(false);
+    const [background, setBackground] = useState(false);
 
-    skipEvent = () => {
-        this.setState({
-            isOpen: false,
-            background: true,
-        });
+    const skipEvent = () => {
+        setIsOpen(false);
+        setBackground(true);
         setTimeout(() => {
-            this.setState({
-                isHide: true,
-            });
+            setisHide(true);
             document.getElementsByClassName("outer")[0].setAttribute("style", "display:block");
         }, 1000);
     }
 
-    timeout = setTimeout(() => { this.setState({ isOpen: false }); }, 4000);
+    let timeout = setTimeout(() => { setIsOpen(false); }, 4000);
     timeout = setTimeout(() => {
-        this.setState({ isHide: true });
+        setisHide(true);
         document.getElementsByClassName("outer")[0].setAttribute("style", "display:block");
     }, 5000);
 
-    render() {
-        return (
-            <div className="first"
+    return (
+        <div className="first"
+            style={{
+                position: "absolute",
+                transition: '1s',
+                opacity: isOpen? 1 : 0,
+                width: "95%",
+                height: "100%",
+                display: isHide ? "none" : "",
+            }}
+        >
+            <span onClick={() => skipEvent}
+                className="skip-button"
                 style={{
-                    position: "absolute",
-                    transition: '1s',
-                    opacity: this.state.isOpen ? 1 : 0,
-                    width: "95%",
-                    height: "100%",
-                    display: this.state.isHide ? "none" : "",
-                }}
-            >
-                <span onClick={this.skipEvent}
-                    className="skip-button"
-                    style={{
-                        background: this.state.background ? "#727272" : "#ffffff",
-                    }}
-                >skip</span>
-                <div className="category">
-                    <div className="first-message">
-                        Tobei
-                        <br />
-                        Information
-                    </div>
-                    <img src={Img} className="first-image" />
+                        background: background ? "#727272" : "#ffffff",
+                    }}>
+                skip
+            </span>
+            <div className="category">
+                <div className="first-message">
+                    Tobei
+                    <br />
+                    Information
                 </div>
+                <img src={Img} className="first-image" />
             </div>
-        );
-    };
+        </div>
+    );
 }
+
+export default Fade;
