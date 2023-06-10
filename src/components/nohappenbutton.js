@@ -2,6 +2,7 @@ import React from "react"
 import "../styles/global.scss"
 
 export default class NoHappenButton extends React.Component {
+    // TODO: stateを変える
     state = {
         background: false
     };

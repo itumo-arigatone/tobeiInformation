@@ -1,7 +1,7 @@
 import React, { useState }from "react";
 import { useTranslation } from "react-i18next";
 
-export const Head = props => <h1>{props.headerText}</h1>
+export const Headline = props => <h1>{props.headerText}</h1>
 
 export const ImportantTime = props =>
     <div className="importantTime">
