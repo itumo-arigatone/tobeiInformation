@@ -13,7 +13,6 @@ const Fade = ({isFirstView, setIsFirstView}) => {
         setTimeout(() => {
             setisHide(true);
             setIsFirstView(false);
-            document.getElementsByClassName("outer")[0].setAttribute("style", "display:block");
         }, 1000);
     }
 
@@ -23,7 +22,6 @@ const Fade = ({isFirstView, setIsFirstView}) => {
     timeout = setTimeout(() => {
         setisHide(true);
         setIsFirstView(false);
-        document.getElementsByClassName("outer")[0].setAttribute("style", "display:block");
     }, 5000);
 
     return (
@@ -45,11 +43,11 @@ const Fade = ({isFirstView, setIsFirstView}) => {
                 skip
             </span>
             <div className="category">
-                <div className="first-message">
+                <h1 className="first-message">
                     Tobei
                     <br />
                     Information
-                </div>
+                </h1>
                 <img src={Img} className="first-image" />
             </div>
         </div>
