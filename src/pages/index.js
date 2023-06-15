@@ -1,10 +1,11 @@
 import React, {useState} from "react";
 import { useTranslation } from "react-i18next";
-import { Headline, ImportantTime, Comment, OtherTime, Itemization, LangageButton } from "../components/contents";
+import { Headline, ImportantTime, Comment, OtherTime, Itemization } from "../components/contents";
 import { Link } from "gatsby";
 import Fade from "../components/fade";
 import Seo from "../components/seo"
 import Footer from "../components/footer";
+import Header from "../components/header";
 
 import '../components/i18n';
 
@@ -22,10 +23,12 @@ export default function Home() {
     return (
         <>
             <Fade isFirstView={isFirstView} setIsFirstView={setIsFirstView} />
+            {!isFirstView && (
+                <Header/>
+            )}
             <div className="outer"
                 style={{display:"none"}}
             >
-                <LangageButton />
                 <Link to="/howto">{t("hotSpring")}</Link>
 
                 <Headline headerText={ t("checkOut") } />

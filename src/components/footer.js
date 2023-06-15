@@ -10,7 +10,7 @@ const Footer = () => {
                     長野県下高井郡野沢温泉村大字豊郷9754-2
                 </div>
                 <div className="copyright">
-                    Copyright © 2023 itumo-arigatone. All Rights Reserved.
+                    Copyright © 2023 <a href="https://github.com/itumo-arigatone">@itumo-arigatone</a>. All Rights Reserved.
                 </div>
             </div>
         </>

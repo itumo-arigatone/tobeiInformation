@@ -35,14 +35,19 @@ body {
     color: #575757;
     border: solid 2px #575757;
     border-radius: 3px;
+    height: 18px;
+}
+.generic-button.en {
+    line-height: 20px;
 }
 
 .langage-button {
     display: inline-block;
+    vertical-align: top;
 }
 .langage-area {
     text-align: right;
-    margin: 50px;
+    margin-right: 12px;
 }
 
 .fullScreen {
