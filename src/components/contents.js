@@ -83,6 +83,7 @@ export const LangageButton = () => {
                     className="generic-button"
                     style={{
                         background: value.ja ? "#727272" : "#ffffff",
+                        color: value.ja ? "#ffffff" : "#727272",
                     }}
                 >
                     日本語
@@ -90,9 +91,10 @@ export const LangageButton = () => {
             </div>
             <div className="langage-button" onClick={ () => ClickLangButton("en") } >
                 <span
-                    className="generic-button"
+                    className="generic-button en"
                     style={{
                         background: value.en ? "#727272" : "#ffffff",
+                        color: value.en ? "#ffffff" : "#727272",
                     }}
                 >
                     English
