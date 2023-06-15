@@ -6,6 +6,8 @@ import Fade from "../components/fade";
 import Seo from "../components/seo"
 import Footer from "../components/footer";
 import Header from "../components/header";
+import ImageModal from "../components/image_modal/imageModal";
+import onsenImg from "../images/onsen.jpg";
 
 import '../components/i18n';
 
@@ -24,43 +26,45 @@ export default function Home() {
         <>
             <Fade isFirstView={isFirstView} setIsFirstView={setIsFirstView} />
             {!isFirstView && (
+                <>
                 <Header/>
-            )}
-            <div className="outer"
-                style={{display:"none"}}
-            >
-                <Link to="/howto">{t("hotSpring")}</Link>
+                    <div className="outer">
+                        <div className="image-area">
+                            <ImageModal src={onsenImg} alt={"how to take a bath at a hot spring"} />
+                            <br/>
+                            <Link to="/howto">{t("hotSpring")}</Link>
+                        </div>
 
-                <Headline headerText={ t("checkOut") } />
-                <ImportantTime time="10:00a.m." />
-                <br />
-                <Comment comment={ t("checkOutOption") } />
+                        <Headline headerText={ t("checkOut") } />
+                        <ImportantTime time="10:00a.m." />
+                        <br />
+                        <Comment comment={ t("checkOutOption") } />
 
-                <Headline headerText={ t("curfew") } />
-                <ImportantTime time="11:00p.m." />
-                <br />
-                <Comment comment={ t("curfewOption")} />
+                        <Headline headerText={ t("curfew") } />
+                        <ImportantTime time="11:00p.m." />
+                        <br />
+                        <Comment comment={ t("curfewOption")} />
 
-                <Headline headerText={ t("mealtime") } />
-                <OtherTime option={ t("breakfast") } time="7:30a.m.~8:30a.m" />
-                <br />
-                <Comment comment={ t("mealtimeOption") } />
+                        <Headline headerText={ t("mealtime") } />
+                        <OtherTime option={ t("breakfast") } time="7:30a.m.~8:30a.m" />
+                        <br />
+                        <Comment comment={ t("mealtimeOption") } />
 
-                <Headline headerText={ t("bathTime") } />
-                <OtherTime time="4:00p.m.~10:00p.m." />
-                <br />
-                <Comment comment={ t("bathTimeOption") } />
+                        <Headline headerText={ t("bathTime") } />
+                        <OtherTime time="4:00p.m.~10:00p.m." />
+                        <br />
+                        <Comment comment={ t("bathTimeOption") } />
 
-                <Headline headerText={ t("showerRoom") } />
-                <OtherTime time="3:00p.m.~10:00p.m." />
-                <OtherTime time="7:00a.m.~9:00p.m." />
-                <br />
-                <Comment comment={ t("bathTimeOption") } />
+                        <Headline headerText={ t("showerRoom") } />
+                        <OtherTime time="3:00p.m.~10:00p.m." />
+                        <OtherTime time="7:00a.m.~9:00p.m." />
+                        <br />
+                        <Comment comment={ t("bathTimeOption") } />
 
-                <Itemization message={JSON.stringify(messageArray)} head="Note"/>
-            </div>
-            {!isFirstView && (
-                <Footer/>
+                        <Itemization message={JSON.stringify(messageArray)} head="Note"/>
+                    </div>
+                    <Footer/>
+                </>
             )}
         </>
     );
